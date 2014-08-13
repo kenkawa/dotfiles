@@ -202,6 +202,14 @@
 <Plug>(unite_toggle_mark_current_candidate)	unite.txt	/*<Plug>(unite_toggle_mark_current_candidate)*
 <Plug>(unite_toggle_mark_current_candidate_up)	unite.txt	/*<Plug>(unite_toggle_mark_current_candidate_up)*
 <Plug>(unite_toggle_transpose_window)	unite.txt	/*<Plug>(unite_toggle_transpose_window)*
+AnsiEsc	AnsiEsc.txt	/*AnsiEsc*
+AnsiEsc-contents	AnsiEsc.txt	/*AnsiEsc-contents*
+AnsiEsc-copyright	AnsiEsc.txt	/*AnsiEsc-copyright*
+AnsiEsc-history	AnsiEsc.txt	/*AnsiEsc-history*
+AnsiEsc-manual	AnsiEsc.txt	/*AnsiEsc-manual*
+AnsiEsc.txt	AnsiEsc.txt	/*AnsiEsc.txt*
+FixWhitespace	trailing-whitespace.txt	/*FixWhitespace*
+FixWhitespace-variables	trailing-whitespace.txt	/*FixWhitespace-variables*
 NERDTree	NERD_tree.txt	/*NERDTree*
 NERDTree-?	NERD_tree.txt	/*NERDTree-?*
 NERDTree-A	NERD_tree.txt	/*NERDTree-A*
@@ -539,6 +547,7 @@ neomru-sources	neomru.txt	/*neomru-sources*
 neomru-usage	neomru.txt	/*neomru-usage*
 neomru-variables	neomru.txt	/*neomru-variables*
 neomru.txt	neomru.txt	/*neomru.txt*
+trailing-whitespace.txt	trailing-whitespace.txt	/*trailing-whitespace.txt*
 unite	unite.txt	/*unite*
 unite#action#do_candidates()	unite.txt	/*unite#action#do_candidates()*
 unite#custom#action()	unite.txt	/*unite#custom#action()*

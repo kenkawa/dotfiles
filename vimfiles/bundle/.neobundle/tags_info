@@ -1,3 +1,4 @@
+AnsiEsc.vim
 cake.vim
 jellybeans.vim
 neobundle.vim
@@ -6,3 +7,4 @@ nerdtree
 unite-colorscheme
 unite.vim
 vim-indent-guides
+vim-trailing-whitespace
