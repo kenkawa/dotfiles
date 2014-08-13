@@ -5,3 +5,4 @@ neomru.vim
 nerdtree
 unite-colorscheme
 unite.vim
+vim-indent-guides
