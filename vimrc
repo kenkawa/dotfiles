@@ -81,10 +81,58 @@ if has('syntax')
 	augroup END
 	call ZenkakuSpace()
 endif
+""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
+" 挿入モード時、ステータスラインの色を変更
+""""""""""""""""""""""""""""""
+let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
 
-
+if has('syntax')
+	augroup InsertHook
+	autocmd!
+	autocmd InsertEnter * call s:StatusLine('Enter')
+	autocmd InsertLeave * call s:StatusLine('Leave')
+	augroup END
+endif
+let s:slhlcmd = ''
+function! s:StatusLine(mode)
+	if a:mode == 'Enter'
+		silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
+	        silent exec g:hi_insert
+	else
+	        highlight clear StatusLine
+		silent exec s:slhlcmd
+	endif
+endfunction
+function! s:GetHighlight(hi)
+        redir => hl
+	exec 'highlight '.a:hi
+	redir END
+	let hl = substitute(hl, '[\r\n]', '', 'g')
+	let hl = substitute(hl, 'xxx', '', '')
+	return hl
+endfunction
+""""""""""""""""""""""""""""""
 
 autocmd Filetype * set formatoptions-=ro
+" 行番号を表示
+set number
+" 対応括弧をハイライト表示する
+set showmatch
+" インクリメンタルサーチを行う
+set incsearch
+" 検索結果をハイライト表示
+set hlsearch
+" コマンド、検索パターンを10000個まで履歴に残す
+set history=10000
+" マウスモード有効
+set mouse=a
+
+" 行末、行の最初への移動のキーマップ設定
+:map! <C-e> <Esc>$a
+:map! <C-a> <Esc>^a
+:map <C-e> <Esc>$a
+:map <C-a> <Esc>^a
 
 filetype plugin indent on     " required!
 filetype indent on
